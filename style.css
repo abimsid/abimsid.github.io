@@ -722,6 +722,85 @@ footer { margin-top: 30px; color: #5f6678; font-size: 10px; text-align: center; 
 }
 
 
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+.faq-section {
+    margin-top: 30px;
+}
+
+.faq-list {
+    display: grid;
+    gap: 10px;
+}
+
+.faq-item {
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.075);
+    border-radius: 18px;
+    background:
+        linear-gradient(145deg, rgba(22,29,47,.84), rgba(13,18,30,.92));
+    transition: border-color .2s ease, transform .2s ease, background .2s ease;
+}
+
+.faq-item:hover {
+    border-color: rgba(122,167,255,.20);
+    transform: translateY(-1px);
+}
+
+.faq-item[open] {
+    border-color: rgba(139,92,246,.22);
+    background:
+        linear-gradient(145deg, rgba(30,34,56,.92), rgba(13,18,30,.95));
+}
+
+.faq-item summary {
+    min-height: 58px;
+    padding: 17px 48px 17px 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #e8ebf4;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.45;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9bacd0;
+    font-size: 22px;
+    font-weight: 400;
+    transition: transform .2s ease, color .2s ease;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+    color: #bca7ff;
+}
+
+.faq-item p {
+    margin: 0 18px 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.055);
+    color: #858da0;
+    font-size: 10.5px;
+    line-height: 1.75;
+}
+
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -838,6 +917,27 @@ footer { margin-top: 30px; color: #5f6678; font-size: 10px; text-align: center; 
 
     .project-actions .cta {
         width: 100%;
+    }
+
+    .faq-section {
+        margin-top: 28px;
+    }
+
+    .faq-item summary {
+        min-height: 54px;
+        padding: 15px 42px 15px 15px;
+        font-size: 11px;
+    }
+
+    .faq-item summary::after {
+        right: 15px;
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        margin: 0 15px 15px;
+        padding-top: 12px;
+        font-size: 10px;
     }
 
 }
